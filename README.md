@@ -1,5 +1,20 @@
 Simple Shell
 
+This project is about creating a simple shell. We will use the following function calls:
+getline()
+fork()
+wait()
+execve()
+strtok()
+perror(0
+getpid and getppid()
+printenv()
+stat()
+setenv()
+
+The collaborators are Beatrice Mukii and Nicholas Ng'ang'a
+
+
 0. Betty would be proud
 mandatory
 Write a beautiful code that passes the Betty checks
@@ -118,38 +133,7 @@ Handle the commands separator ;
 Simple shell 1.0 +
 
 Handle the && and || shell logical operators
-alex@~$ ls /var && ls /var
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn && ls /var
-ls: cannot access /hbtn: No such file or directory
-alex@~$ ls /var && ls /var && ls /var && ls /hbtn
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-ls: cannot access /hbtn: No such file or directory
-alex@~$ ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-ls: cannot access /hbtn: No such file or directory
-alex@~$
-alex@~$ ls /var || ls /var
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /var
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var || ls /var
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$
+
 
 13. alias
 #advanced
@@ -168,28 +152,12 @@ Simple shell 1.0 +
 Handle variables replacement
 Handle the $? variable
 Handle the $$ variable
-julien@ubuntu:~/shell$ ./hsh
-$ ls /var
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  snap  spool  tmp
-$ echo $?
-0
-$ echo $$
-5104
-$ echo $PATH
-/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-$ exit 
-julien@ubuntu:~/shell$ 
 
 15. Comments
 #advanced
 Simple shell 1.0 +
 
 Handle comments (#)
-julien@ubuntu:~/shell$ sh
-$ echo $$ # ls -la
-5114
-$ exit
-julien@ubuntu:~/shell$ 
 
 16. File as input
 #advanced
@@ -199,5 +167,4 @@ Usage: simple_shell [filename]
 Your shell can take a file as a command line argument
 The file contains all the commands that your shell should run before exiting
 The file should contain one command per line
-In this mode, the shell should not print a prompt and should not read from stdin
-Well done on completing this project! Let the world hear about this milestone achieved.
+In this mode, the shell should not print a prompt and should not read from stdin.
