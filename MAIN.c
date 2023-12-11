@@ -11,7 +11,7 @@
 int main(void)
 {
 	char delimeter[] = " \t\n";
-	char *command = NULL;
+	char *comand = NULL;
 	size_t n = 0;
 
 	while (1)

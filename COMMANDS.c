@@ -64,7 +64,7 @@ void run_exit_command(char *str[], int index)
 
 	if (my_strcmp(str[0], "exit") == 0)
 	{
-		if (indexx == 1)
+		if (index == 1)
 		{
 			exit(0);
 		}
