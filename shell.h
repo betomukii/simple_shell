@@ -15,7 +15,7 @@
 #define MAX_ALIAS_VALUE_LENGTH 100
 
 /**
- * struct alais_t - struct
+ * struct alias_t - struct
  * @name: name
  * @value: value
  * Description: This stuct is for alias

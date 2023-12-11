@@ -3,7 +3,7 @@
 
 /**
  * tokenizer - function that splits string of commands
- * @command: string to break
+ * @comand: string to break
  * @delimiter: character to use to break
  * Return: Nothing
  */
@@ -14,7 +14,7 @@ void tokenizer(char *comand, char *delimiter)
 	char *token;
 	int token_index = 0;
 
-	if (command == NULL)
+	if (comand == NULL)
 		return;
 
 	token = custom_strtok(comand, delimiter);
@@ -25,7 +25,7 @@ void tokenizer(char *comand, char *delimiter)
 			if (token_index > 0 && strcmp(token_arr[token_index - 1], ";") == 0)
 			{
 				token_arr[token_index - 1] = NULL;
-				execute_command(token_arr);
+				execute_comand(token_arr);
 				token_index = 0;
 			}
 			token_arr[token_index] = token;
@@ -39,7 +39,7 @@ void tokenizer(char *comand, char *delimiter)
 	}
 	token_arr[token_index] = NULL;
 
-	execute_command(token_arr);
+	execute_comand(token_arr);
 }
 
 /**
@@ -47,7 +47,7 @@ void tokenizer(char *comand, char *delimiter)
  * @token_arr: the string passed as comands
  * Return: pointer
  */
-void execute_command(char **token_arr)
+void execute_comand(char **token_arr)
 {
 	int token_index = 0, status = 0;
 	pid_t child;
