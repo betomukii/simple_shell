@@ -6,7 +6,7 @@
  * Return: getenv
  */
 
-char *my_getenv(conat char *name)
+char *my_getenv(const char *name)
 {
 	char **env = environ;
 	size_t namelen = m_strlen(name);
@@ -57,8 +57,8 @@ int my_strncmp(const char *s1, const char *s2, size_t n)
 		{
 			return (*s1 - *s2);
 		}
-		*s1++;
-		*s2++;
+		s1++;
+		s2++;
 	}
 	if (n == 0)
 		return (0);

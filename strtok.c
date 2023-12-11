@@ -59,7 +59,7 @@ size_t my_strcspn(const char *s, const char *reject)
 			return (n);
 
 		else
-			s++, n++
+			s++, n++;
 	}
 	return (n);
 }

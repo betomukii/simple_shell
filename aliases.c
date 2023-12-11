@@ -80,7 +80,7 @@ void handle_alias(char *input)
 		{
 			if (strcmp(aliases[i].name, name) == 0)
 			{
-				printf("%s = '%s'\n", aliases[i].name, aliased[i].value);
+				printf("%s = '%s'\n", aliases[i].name, aliases[i].value);
 			}
 		}
 	}
