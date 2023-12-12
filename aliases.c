@@ -28,7 +28,7 @@ void print_aliases(void)
  */
 void set_alias(char *name, char *value)
 {
-	int alias_count = 0;
+	static int alias_count = 0;
 	int i;
 	struct alias_t aliases[MAX_ALIAS_COUNT];
 
