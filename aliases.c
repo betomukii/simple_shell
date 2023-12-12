@@ -37,15 +37,12 @@ void set_alias(char *name, char *value)
 		printf("Error: Too many aliases\n");
 		return;
 	}
-	if (alias_count > 0)
+	for (i = 0; i < alias_count; i++)
 	{
-		for (i = 0; i < alias_count; i++)
+		if (strcmp(aliases[i].name, name) == 0)
 		{
-			if (strcmp(aliases[i].name, name) == 0)
-			{
-				_strcpy(aliases[i].value, value);
-				return;
-			}
+			_strcpy(aliases[i].value, value);
+			return;
 		}
 	}
 	_strcpy(aliases[alias_count].name, name);
