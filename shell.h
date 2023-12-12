@@ -45,7 +45,7 @@ size_t my_strcspn(const char *s, const char *reject);
 char *my_strchr(const char *s, int c);
 size_t my_strspn(const char *str, const char *delimiters);
 
-void execute_command(char **token_arr);
+void execute_comand(char **token_arr);
 void *tokenize_command(char *comand, char *delimiter,
 		char **token_arr, int *token_count);
 
